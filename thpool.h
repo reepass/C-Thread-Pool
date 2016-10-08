@@ -16,6 +16,11 @@
 
 typedef struct thpool_* threadpool;
 
+typedef struct rdb_pool {
+    unsigned int        threads;
+    threadpool          pool;
+} rdb_pool;
+
 
 /**
  * @brief  Initialize threadpool
