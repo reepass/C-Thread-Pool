@@ -18,6 +18,9 @@ set(CTHPOOL_SRC thpool.c)
 # Define our library in cmake
 add_library(libcthpool STATIC ${CTHPOOL_SRC})
 
+# Dynamically linked libraries
+target_link_libraries(libcthpool pthread)
+
 # Include the subdirectories to search for headers
 target_include_directories(libcthpool PUBLIC ".")
 
